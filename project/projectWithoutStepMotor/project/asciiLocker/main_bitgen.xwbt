@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\otas17\Desktop\project\asciiLocker\main.ncd
+OUTFILE=C:\Users\otas17\Desktop\project\asciiLocker\main.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5vq100
+WORKINGDIR=C:\Users\otas17\Desktop\project\asciiLocker
+LICENSE=WebPack
+USER_INFO=211810915_0_0_851

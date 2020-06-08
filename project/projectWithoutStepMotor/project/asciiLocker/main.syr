@@ -1,0 +1,899 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-vq100
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\otas17\Desktop\project\asciiLocker\timer.vhd" into library work
+Parsing entity <timer>.
+Parsing architecture <Behavioral> of entity <timer>.
+Parsing VHDL file "C:\Users\otas17\Desktop\project\asciiLocker\sevseg_driver.vhd" into library work
+Parsing entity <sevseg_driver>.
+Parsing architecture <Behavioral> of entity <sevseg_driver>.
+Parsing VHDL file "C:\Users\otas17\Desktop\project\asciiLocker\sevseg_decoder.vhd" into library work
+Parsing entity <sevseg_decoder>.
+Parsing architecture <Behavioral> of entity <sevseg_decoder>.
+Parsing VHDL file "C:\Users\otas17\Desktop\project\asciiLocker\passwordModule.vhd" into library work
+Parsing entity <passwordModule>.
+Parsing architecture <Behavioral> of entity <passwordmodule>.
+Parsing VHDL file "C:\Users\otas17\Desktop\project\asciiLocker\clock_generator.vhd" into library work
+Parsing entity <clock_generator>.
+Parsing architecture <Behavioral> of entity <clock_generator>.
+Parsing VHDL file "C:\Users\otas17\Desktop\project\asciiLocker\main.vhd" into library work
+Parsing entity <main>.
+Parsing architecture <Behavioral> of entity <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <main> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sevseg_decoder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sevseg_driver> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <clock_generator> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <timer> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <passwordModule> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\otas17\Desktop\project\asciiLocker\passwordModule.vhd" Line 61: Using initial value "10101" for pukcodeleft since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\otas17\Desktop\project\asciiLocker\passwordModule.vhd" Line 62: Using initial value "11101" for pukcoderight since it is never assigned
+INFO:HDLCompiler:679 - "C:\Users\otas17\Desktop\project\asciiLocker\passwordModule.vhd" Line 152. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <main>.
+    Related source file is "C:\Users\otas17\Desktop\project\asciiLocker\main.vhd".
+INFO:Xst:3210 - "C:\Users\otas17\Desktop\project\asciiLocker\main.vhd" line 142: Output port <Stepmotor_clock> of the instance <Inst_clock_generator> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\otas17\Desktop\project\asciiLocker\main.vhd" line 157: Output port <workStep> of the instance <Inst_passwordModule> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <main> synthesized.
+
+Synthesizing Unit <sevseg_decoder>.
+    Related source file is "C:\Users\otas17\Desktop\project\asciiLocker\sevseg_decoder.vhd".
+    Found 32x8-bit Read Only RAM for signal <sevseg_numbers>
+    Summary:
+	inferred   1 RAM(s).
+Unit <sevseg_decoder> synthesized.
+
+Synthesizing Unit <sevseg_driver>.
+    Related source file is "C:\Users\otas17\Desktop\project\asciiLocker\sevseg_driver.vhd".
+    Found 3-bit register for signal <COUNTER>.
+    Found 3-bit adder for signal <COUNTER[2]_GND_8_o_add_0_OUT> created at line 61.
+    Found 8x8-bit Read Only RAM for signal <sev_seg_leds>
+    Found 5-bit 8-to-1 multiplexer for signal <sev_seg_number> created at line 69.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <sevseg_driver> synthesized.
+
+Synthesizing Unit <clock_generator>.
+    Related source file is "C:\Users\otas17\Desktop\project\asciiLocker\clock_generator.vhd".
+    Found 1-bit register for signal <temp>.
+    Found 32-bit register for signal <counters>.
+    Found 1-bit register for signal <temps>.
+    Found 32-bit register for signal <counters2>.
+    Found 1-bit register for signal <temps2>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter[31]_GND_9_o_add_0_OUT> created at line 58.
+    Found 32-bit adder for signal <counters[31]_GND_9_o_add_3_OUT> created at line 66.
+    Found 32-bit adder for signal <counters2[31]_GND_9_o_add_6_OUT> created at line 74.
+    Found 32-bit comparator greater for signal <GND_9_o_counter[31]_LessThan_2_o> created at line 59
+    Found 32-bit comparator greater for signal <GND_9_o_counters[31]_LessThan_5_o> created at line 67
+    Found 32-bit comparator greater for signal <GND_9_o_counters2[31]_LessThan_8_o> created at line 75
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  99 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <clock_generator> synthesized.
+
+Synthesizing Unit <timer>.
+    Related source file is "C:\Users\otas17\Desktop\project\asciiLocker\timer.vhd".
+    Found 5-bit register for signal <s2>.
+    Found 5-bit register for signal <m>.
+    Found 5-bit register for signal <s1>.
+    Found 5-bit subtractor for signal <GND_10_o_GND_10_o_sub_5_OUT<4:0>> created at line 70.
+    Found 5-bit subtractor for signal <GND_10_o_GND_10_o_sub_7_OUT<4:0>> created at line 73.
+    Found 5-bit subtractor for signal <GND_10_o_GND_10_o_sub_9_OUT<4:0>> created at line 75.
+    Found 5-bit comparator greater for signal <s1[4]_GND_10_o_LessThan_4_o> created at line 69
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <timer> synthesized.
+
+Synthesizing Unit <passwordModule>.
+    Related source file is "C:\Users\otas17\Desktop\project\asciiLocker\passwordModule.vhd".
+    Found 1-bit register for signal <workStep>.
+    Found 5-bit register for signal <pre_informationm>.
+    Found 5-bit register for signal <pre_informationr>.
+    Found 1-bit register for signal <pre_rst>.
+    Found 32-bit register for signal <counter>.
+    Found 5-bit register for signal <currentPasswordLeft>.
+    Found 5-bit register for signal <currentPasswordRight>.
+    Found 2-bit register for signal <ps_state>.
+    Found 5-bit register for signal <pre_informationl>.
+    Found finite state machine <FSM_0> for signal <ps_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 25                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 2                                              |
+    | Clock              | do_it (rising_edge)                            |
+    | Power Up State     | unlocked                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit subtractor for signal <counter[31]_GND_11_o_sub_11_OUT<31:0>> created at line 96.
+    Found 4x5-bit Read Only RAM for signal <_n0133>
+    Found 1-bit 3-to-1 multiplexer for signal <ps_state[1]_X_11_o_Mux_38_o> created at line 76.
+    Found 5-bit 3-to-1 multiplexer for signal <ps_state[1]_X_11_o_wide_mux_39_OUT> created at line 76.
+    Found 5-bit 3-to-1 multiplexer for signal <ps_state[1]_X_11_o_wide_mux_40_OUT> created at line 76.
+    Found 5-bit 3-to-1 multiplexer for signal <ps_state[1]_X_11_o_wide_mux_41_OUT> created at line 76.
+    Found 32-bit comparator greater for signal <counter[31]_GND_11_o_LessThan_1_o> created at line 75
+    Found 5-bit comparator equal for signal <binaryPasswordLeft[4]_currentPasswordLeft[4]_equal_5_o> created at line 77
+    Found 5-bit comparator equal for signal <binaryPasswordRight[4]_currentPasswordRight[4]_equal_6_o> created at line 77
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  17 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <passwordModule> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 32x8-bit single-port Read Only RAM                    : 1
+ 4x5-bit single-port Read Only RAM                     : 1
+ 8x8-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 8
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+ 5-bit subtractor                                      : 3
+# Registers                                            : 18
+ 1-bit register                                        : 5
+ 3-bit register                                        : 1
+ 32-bit register                                       : 4
+ 5-bit register                                        : 8
+# Comparators                                          : 7
+ 32-bit comparator greater                             : 4
+ 5-bit comparator equal                                : 2
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 20
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 3-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 5-bit 2-to-1 multiplexer                              : 10
+ 5-bit 3-to-1 multiplexer                              : 3
+ 5-bit 8-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <clock_generator>.
+The following registers are absorbed into counter <counters2>: 1 register on signal <counters2>.
+The following registers are absorbed into counter <counters>: 1 register on signal <counters>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <clock_generator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <passwordModule>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0133> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 5-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <counter<1:0>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <passwordModule> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sevseg_decoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_sevseg_numbers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <INPUT>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sevseg_numbers> |          |
+    -----------------------------------------------------------------------
+Unit <sevseg_decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sevseg_driver>.
+The following registers are absorbed into counter <COUNTER>: 1 register on signal <COUNTER>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_sev_seg_leds> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <COUNTER>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sev_seg_leds>  |          |
+    -----------------------------------------------------------------------
+Unit <sevseg_driver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <timer>.
+The following registers are absorbed into counter <s2>: 1 register on signal <s2>.
+The following registers are absorbed into counter <m>: 1 register on signal <m>.
+The following registers are absorbed into counter <s1>: 1 register on signal <s1>.
+Unit <timer> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 32x8-bit single-port distributed Read Only RAM        : 1
+ 4x5-bit single-port distributed Read Only RAM         : 1
+ 8x8-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 32-bit subtractor                                     : 1
+# Counters                                             : 7
+ 3-bit up counter                                      : 1
+ 32-bit up counter                                     : 3
+ 5-bit down counter                                    : 3
+# Registers                                            : 62
+ Flip-Flops                                            : 62
+# Comparators                                          : 7
+ 32-bit comparator greater                             : 4
+ 5-bit comparator equal                                : 2
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 18
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 3-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 5-bit 2-to-1 multiplexer                              : 8
+ 5-bit 3-to-1 multiplexer                              : 3
+ 5-bit 8-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_passwordModule/FSM_0> on signal <ps_state[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ locked   | 01
+ unlocked | 00
+ change   | 11
+----------------------
+WARNING:Xst:1293 - FF/Latch <pre_informationr_1> has a constant value of 1 in block <passwordModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pre_informationr_2> has a constant value of 1 in block <passwordModule>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <pre_informationm_1> in Unit <passwordModule> is equivalent to the following 2 FFs/Latches, which will be removed : <pre_informationm_2> <pre_informationr_0> 
+INFO:Xst:2261 - The FF/Latch <pre_informationm_3> in Unit <passwordModule> is equivalent to the following FF/Latch, which will be removed : <pre_informationl_4> 
+INFO:Xst:2261 - The FF/Latch <pre_informationm_4> in Unit <passwordModule> is equivalent to the following FF/Latch, which will be removed : <pre_informationr_4> 
+
+Optimizing unit <main> ...
+
+Optimizing unit <passwordModule> ...
+
+Optimizing unit <clock_generator> ...
+
+Optimizing unit <timer> ...
+WARNING:Xst:1293 - FF/Latch <s2_3> has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <s2_4> has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <s1_4> has a constant value of 0 in block <timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Inst_passwordModule/workStep> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_31> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_30> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_29> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_28> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_27> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_26> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_25> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_24> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_23> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_22> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_21> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_20> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_19> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_18> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_17> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_16> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_15> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_14> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_13> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_12> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_11> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_10> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_9> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_8> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_7> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_6> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_5> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_4> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_3> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_2> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_1> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/counters2_0> of sequential type is unconnected in block <main>.
+WARNING:Xst:2677 - Node <Inst_clock_generator/temps2> of sequential type is unconnected in block <main>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 27.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 135
+ Flip-Flops                                            : 135
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 542
+#      GND                         : 1
+#      INV                         : 48
+#      LUT1                        : 70
+#      LUT2                        : 14
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 66
+#      LUT3_L                      : 2
+#      LUT4                        : 73
+#      LUT4_D                      : 1
+#      LUT4_L                      : 3
+#      MUXCY                       : 140
+#      MUXF5                       : 19
+#      MUXF6                       : 5
+#      VCC                         : 1
+#      XORCY                       : 96
+# FlipFlops/Latches                : 135
+#      FD                          : 36
+#      FDE                         : 10
+#      FDP                         : 9
+#      FDR                         : 67
+#      FDRE                        : 11
+#      FDRSE                       : 1
+#      FDS                         : 1
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 27
+#      IBUF                        : 11
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50avq100-5 
+
+ Number of Slices:                      158  out of    704    22%  
+ Number of Slice Flip Flops:            135  out of   1408     9%  
+ Number of 4 input LUTs:                280  out of   1408    19%  
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of     68    42%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)      | Load  |
+-----------------------------------+----------------------------+-------+
+Inst_clock_generator/temp          | NONE(Inst_driver/COUNTER_0)| 3     |
+do_it                              | BUFGP                      | 54    |
+clk                                | BUFGP                      | 66    |
+Inst_clock_generator/temps         | NONE(Inst_timer/s1_3)      | 12    |
+-----------------------------------+----------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+Control Signal                                                                                        | Buffer(FF name)                             | Load  |
+------------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+Inst_passwordModule/minute[4]_second2[4]_AND_13_o(Inst_passwordModule/minute[4]_second2[4]_AND_13_o:O)| NONE(Inst_passwordModule/pre_informationm_1)| 9     |
+------------------------------------------------------------------------------------------------------+---------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.928ns (Maximum Frequency: 168.692MHz)
+   Minimum input arrival time before clock: 5.999ns
+   Maximum output required time after clock: 9.220ns
+   Maximum combinational path delay: 8.934ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_clock_generator/temp'
+  Clock period: 3.082ns (frequency: 324.469MHz)
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Delay:               3.082ns (Levels of Logic = 1)
+  Source:            Inst_driver/COUNTER_0 (FF)
+  Destination:       Inst_driver/COUNTER_0 (FF)
+  Source Clock:      Inst_clock_generator/temp rising
+  Destination Clock: Inst_clock_generator/temp rising
+
+  Data Path: Inst_driver/COUNTER_0 to Inst_driver/COUNTER_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             31   0.495   1.139  Inst_driver/COUNTER_0 (Inst_driver/COUNTER_0)
+     LUT3:I1->O            3   0.562   0.451  Inst_driver/COUNTER[2]_PWR_8_o_equal_2_o<2>1 (Inst_driver/COUNTER[2]_PWR_8_o_equal_2_o)
+     FDR:R                     0.435          Inst_driver/COUNTER_0
+    ----------------------------------------
+    Total                      3.082ns (1.492ns logic, 1.590ns route)
+                                       (48.4% logic, 51.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'do_it'
+  Clock period: 5.928ns (frequency: 168.692MHz)
+  Total number of paths / destination ports: 2869 / 55
+-------------------------------------------------------------------------
+Delay:               5.928ns (Levels of Logic = 34)
+  Source:            Inst_passwordModule/counter_0 (FF)
+  Destination:       Inst_passwordModule/counter_31 (FF)
+  Source Clock:      do_it rising
+  Destination Clock: do_it rising
+
+  Data Path: Inst_passwordModule/counter_0 to Inst_passwordModule/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.495   0.607  Inst_passwordModule/counter_0 (Inst_passwordModule/counter_0)
+     LUT1:I0->O            1   0.561   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<0>_rt (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<0>_rt)
+     MUXCY:S->O            1   0.523   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<0> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<1> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<2> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<3> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<4> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<5> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<6> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<7> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<8> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<9> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<10> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<11> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<12> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<13> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<14> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<15> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<16> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<17> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<18> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<19> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<20> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<21> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<22> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<23> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<24> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<24>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<25> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<25>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<26> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<26>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<27> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<27>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<28> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<28>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<29> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<29>)
+     MUXCY:CI->O           0   0.065   0.000  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<30> (Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_cy<30>)
+     XORCY:CI->O           1   0.654   0.380  Inst_passwordModule/Msub_counter[31]_GND_11_o_sub_11_OUT<31:0>_xor<31> (Inst_passwordModule/counter[31]_GND_11_o_sub_11_OUT<31>)
+     LUT3:I2->O            1   0.561   0.000  Inst_passwordModule/Mmux_GND_11_o_ps_state[1]_mux_53_OUT251 (Inst_passwordModule/GND_11_o_ps_state[1]_mux_53_OUT<31>)
+     FD:D                      0.197          Inst_passwordModule/counter_31
+    ----------------------------------------
+    Total                      5.928ns (4.941ns logic, 0.987ns route)
+                                       (83.4% logic, 16.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.971ns (frequency: 201.163MHz)
+  Total number of paths / destination ports: 2772 / 130
+-------------------------------------------------------------------------
+Delay:               4.971ns (Levels of Logic = 14)
+  Source:            Inst_clock_generator/counters_8 (FF)
+  Destination:       Inst_clock_generator/temps (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Inst_clock_generator/counters_8 to Inst_clock_generator/temps
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.495   0.488  Inst_clock_generator/counters_8 (Inst_clock_generator/counters_8)
+     LUT1:I0->O            1   0.561   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<0>_rt (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<0>_rt)
+     MUXCY:S->O            1   0.523   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<0> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<1> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<2> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<3> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<4> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<5> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<6> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<7> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<8> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<9> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<10> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<10>)
+     MUXCY:CI->O          33   0.065   1.073  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<11> (Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<11>)
+     INV:I->O              1   0.562   0.357  Inst_clock_generator/Mcompar_GND_9_o_counters[31]_LessThan_5_o_cy<11>_inv_INV_0 (Inst_clock_generator/GND_9_o_counters[31]_LessThan_5_o)
+     FD:D                      0.197          Inst_clock_generator/temps
+    ----------------------------------------
+    Total                      4.971ns (3.053ns logic, 1.918ns route)
+                                       (61.4% logic, 38.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_clock_generator/temps'
+  Clock period: 5.248ns (frequency: 190.565MHz)
+  Total number of paths / destination ports: 246 / 36
+-------------------------------------------------------------------------
+Delay:               5.248ns (Levels of Logic = 3)
+  Source:            Inst_timer/s1_3 (FF)
+  Destination:       Inst_timer/s1_3 (FF)
+  Source Clock:      Inst_clock_generator/temps rising
+  Destination Clock: Inst_clock_generator/temps rising
+
+  Data Path: Inst_timer/s1_3 to Inst_timer/s1_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.495   0.677  Inst_timer/s1_3 (Inst_timer/s1_3)
+     LUT4:I0->O            5   0.561   0.540  Inst_passwordModule/second1[4]_GND_11_o_equal_3_o<4>1 (Inst_timer/Mcount_s1_xor<3>12)
+     LUT4:I3->O            7   0.561   0.625  Inst_timer/Mcount_m_val11 (Inst_timer/Mcount_m_val1)
+     LUT3:I2->O           11   0.561   0.793  Inst_timer/Mcount_m_val1 (Inst_timer/Mcount_m_val)
+     FDRE:R                    0.435          Inst_timer/m_1
+    ----------------------------------------
+    Total                      5.248ns (2.613ns logic, 2.635ns route)
+                                       (49.8% logic, 50.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'do_it'
+  Total number of paths / destination ports: 501 / 64
+-------------------------------------------------------------------------
+Offset:              5.999ns (Levels of Logic = 9)
+  Source:            binaryPasswordRight<3> (PAD)
+  Destination:       Inst_passwordModule/counter_31 (FF)
+  Destination Clock: do_it rising
+
+  Data Path: binaryPasswordRight<3> to Inst_passwordModule/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.824   0.607  binaryPasswordRight_3_IBUF (binaryPasswordRight_3_IBUF)
+     LUT4:I0->O            1   0.561   0.000  Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_lut<0> (Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<0> (Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<1> (Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<2> (Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<3> (Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<3>)
+     MUXCY:CI->O          11   0.179   0.859  Inst_passwordModule/ps_state_FSM_FFd2-In21_wg_cy<4> (Inst_passwordModule/ps_state_FSM_FFd2-In21)
+     LUT2_D:I1->O         15   0.562   0.930  Inst_passwordModule/Mmux_ps_state[1]_X_11_o_Mux_42_o11_1 (Inst_passwordModule/Mmux_ps_state[1]_X_11_o_Mux_42_o11)
+     LUT3:I1->O            1   0.562   0.000  Inst_passwordModule/Mmux_GND_11_o_ps_state[1]_mux_53_OUT181 (Inst_passwordModule/GND_11_o_ps_state[1]_mux_53_OUT<25>)
+     FD:D                      0.197          Inst_passwordModule/counter_25
+    ----------------------------------------
+    Total                      5.999ns (3.603ns logic, 2.396ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_clock_generator/temp'
+  Total number of paths / destination ports: 485 / 16
+-------------------------------------------------------------------------
+Offset:              9.220ns (Levels of Logic = 6)
+  Source:            Inst_driver/COUNTER_0 (FF)
+  Destination:       SEVSEG_DATA<4> (PAD)
+  Source Clock:      Inst_clock_generator/temp rising
+
+  Data Path: Inst_driver/COUNTER_0 to SEVSEG_DATA<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             31   0.495   1.181  Inst_driver/COUNTER_0 (Inst_driver/COUNTER_0)
+     LUT3:I0->O            1   0.561   0.000  Inst_driver/Mmux_sev_seg_number_44 (Inst_driver/Mmux_sev_seg_number_44)
+     MUXF5:I1->O           1   0.229   0.000  Inst_driver/Mmux_sev_seg_number_3_f5_3 (Inst_driver/Mmux_sev_seg_number_3_f54)
+     MUXF6:I1->O          15   0.239   0.972  Inst_driver/Mmux_sev_seg_number_2_f6_3 (wire_sevseg_data<4>)
+     LUT4:I0->O            1   0.561   0.000  Inst_decoder/Mram_sevseg_numbers11_G (N71)
+     MUXF5:I1->O           1   0.229   0.357  Inst_decoder/Mram_sevseg_numbers11 (SEVSEG_DATA_1_OBUF)
+     OBUF:I->O                 4.396          SEVSEG_DATA_1_OBUF (SEVSEG_DATA<1>)
+    ----------------------------------------
+    Total                      9.220ns (6.710ns logic, 2.510ns route)
+                                       (72.8% logic, 27.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_clock_generator/temps'
+  Total number of paths / destination ports: 160 / 8
+-------------------------------------------------------------------------
+Offset:              8.842ns (Levels of Logic = 6)
+  Source:            Inst_timer/m_1 (FF)
+  Destination:       SEVSEG_DATA<7> (PAD)
+  Source Clock:      Inst_clock_generator/temps rising
+
+  Data Path: Inst_timer/m_1 to SEVSEG_DATA<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.495   0.816  Inst_timer/m_1 (Inst_timer/m_1)
+     LUT3:I1->O            1   0.562   0.000  Inst_driver/Mmux_sev_seg_number_61 (Inst_driver/Mmux_sev_seg_number_61)
+     MUXF5:I0->O           1   0.229   0.000  Inst_driver/Mmux_sev_seg_number_4_f5_0 (Inst_driver/Mmux_sev_seg_number_4_f51)
+     MUXF6:I0->O          14   0.239   0.958  Inst_driver/Mmux_sev_seg_number_2_f6_0 (wire_sevseg_data<1>)
+     LUT4:I0->O            1   0.561   0.000  Inst_decoder/Mram_sevseg_numbers7_G (N63)
+     MUXF5:I1->O           1   0.229   0.357  Inst_decoder/Mram_sevseg_numbers7 (SEVSEG_DATA_7_OBUF)
+     OBUF:I->O                 4.396          SEVSEG_DATA_7_OBUF (SEVSEG_DATA<7>)
+    ----------------------------------------
+    Total                      8.842ns (6.711ns logic, 2.131ns route)
+                                       (75.9% logic, 24.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'do_it'
+  Total number of paths / destination ports: 161 / 8
+-------------------------------------------------------------------------
+Offset:              8.543ns (Levels of Logic = 6)
+  Source:            Inst_passwordModule/pre_informationm_1 (FF)
+  Destination:       SEVSEG_DATA<7> (PAD)
+  Source Clock:      do_it rising
+
+  Data Path: Inst_passwordModule/pre_informationm_1 to SEVSEG_DATA<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.495   0.517  Inst_passwordModule/pre_informationm_1 (Inst_passwordModule/pre_informationm_1)
+     LUT3:I1->O            1   0.562   0.000  Inst_driver/Mmux_sev_seg_number_54 (Inst_driver/Mmux_sev_seg_number_52)
+     MUXF5:I0->O           1   0.229   0.000  Inst_driver/Mmux_sev_seg_number_3_f5_0 (Inst_driver/Mmux_sev_seg_number_3_f51)
+     MUXF6:I1->O          14   0.239   0.958  Inst_driver/Mmux_sev_seg_number_2_f6_0 (wire_sevseg_data<1>)
+     LUT4:I0->O            1   0.561   0.000  Inst_decoder/Mram_sevseg_numbers7_G (N63)
+     MUXF5:I1->O           1   0.229   0.357  Inst_decoder/Mram_sevseg_numbers7 (SEVSEG_DATA_7_OBUF)
+     OBUF:I->O                 4.396          SEVSEG_DATA_7_OBUF (SEVSEG_DATA<7>)
+    ----------------------------------------
+    Total                      8.543ns (6.711ns logic, 1.832ns route)
+                                       (78.6% logic, 21.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 136 / 8
+-------------------------------------------------------------------------
+Delay:               8.934ns (Levels of Logic = 7)
+  Source:            binaryPasswordLeft<4> (PAD)
+  Destination:       SEVSEG_DATA<4> (PAD)
+
+  Data Path: binaryPasswordLeft<4> to SEVSEG_DATA<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.824   0.565  binaryPasswordLeft_4_IBUF (binaryPasswordLeft_4_IBUF)
+     LUT3:I1->O            1   0.562   0.000  Inst_driver/Mmux_sev_seg_number_44 (Inst_driver/Mmux_sev_seg_number_44)
+     MUXF5:I1->O           1   0.229   0.000  Inst_driver/Mmux_sev_seg_number_3_f5_3 (Inst_driver/Mmux_sev_seg_number_3_f54)
+     MUXF6:I1->O          15   0.239   0.972  Inst_driver/Mmux_sev_seg_number_2_f6_3 (wire_sevseg_data<4>)
+     LUT4:I0->O            1   0.561   0.000  Inst_decoder/Mram_sevseg_numbers11_G (N71)
+     MUXF5:I1->O           1   0.229   0.357  Inst_decoder/Mram_sevseg_numbers11 (SEVSEG_DATA_1_OBUF)
+     OBUF:I->O                 4.396          SEVSEG_DATA_1_OBUF (SEVSEG_DATA<1>)
+    ----------------------------------------
+    Total                      8.934ns (7.040ns logic, 1.894ns route)
+                                       (78.8% logic, 21.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Inst_clock_generator/temp
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+Inst_clock_generator/temp|    3.082|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Inst_clock_generator/temps
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+Inst_clock_generator/temps|    5.248|         |         |         |
+do_it                     |    2.843|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.971|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock do_it
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+Inst_clock_generator/temps|    7.180|         |         |         |
+do_it                     |    5.928|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.88 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+Total memory usage is 240412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   44 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

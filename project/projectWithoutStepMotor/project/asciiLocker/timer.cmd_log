@@ -1,0 +1,2 @@
+vhdtdtfi -prj asciiLocker -o C:/Users/otas17/Desktop/project/asciiLocker/timer.vhi -module timer -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work timer.vhd 
+vhdtdtfi -prj asciiLocker -o C:/Users/otas17/Desktop/project/asciiLocker/timer.vhi -module timer -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work timer.vhd 

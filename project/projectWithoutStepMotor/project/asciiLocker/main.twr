@@ -1,0 +1,188 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf ports.ucf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc3s50a,vq100,-5 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock do_it
+----------------------+------------+------------+------------------+--------+
+                      |Max Setup to|Max Hold to |                  | Clock  |
+Source                | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+----------------------+------------+------------+------------------+--------+
+binaryPasswordLeft<0> |    5.357(R)|   -0.309(R)|do_it_BUFGP       |   0.000|
+binaryPasswordLeft<1> |    5.402(R)|   -0.322(R)|do_it_BUFGP       |   0.000|
+binaryPasswordLeft<2> |    5.927(R)|   -0.442(R)|do_it_BUFGP       |   0.000|
+binaryPasswordLeft<3> |    5.427(R)|   -0.096(R)|do_it_BUFGP       |   0.000|
+binaryPasswordLeft<4> |    5.860(R)|   -0.621(R)|do_it_BUFGP       |   0.000|
+binaryPasswordRight<0>|    5.732(R)|   -0.312(R)|do_it_BUFGP       |   0.000|
+binaryPasswordRight<1>|    5.473(R)|   -0.086(R)|do_it_BUFGP       |   0.000|
+binaryPasswordRight<2>|    5.484(R)|   -0.209(R)|do_it_BUFGP       |   0.000|
+binaryPasswordRight<3>|    5.903(R)|   -0.201(R)|do_it_BUFGP       |   0.000|
+binaryPasswordRight<4>|    5.033(R)|    0.066(R)|do_it_BUFGP       |   0.000|
+changePassword        |    4.011(R)|   -0.539(R)|do_it_BUFGP       |   0.000|
+----------------------+------------+------------+------------------+--------+
+
+Clock do_it to Pad
+--------------+------------+------------------+--------+
+              | clk (edge) |                  | Clock  |
+Destination   |   to PAD   |Internal Clock(s) | Phase  |
+--------------+------------+------------------+--------+
+SEVSEG_DATA<0>|   10.679(R)|do_it_BUFGP       |   0.000|
+SEVSEG_DATA<1>|   10.131(R)|do_it_BUFGP       |   0.000|
+SEVSEG_DATA<2>|   11.278(R)|do_it_BUFGP       |   0.000|
+SEVSEG_DATA<3>|   10.640(R)|do_it_BUFGP       |   0.000|
+SEVSEG_DATA<4>|   10.911(R)|do_it_BUFGP       |   0.000|
+SEVSEG_DATA<5>|    9.988(R)|do_it_BUFGP       |   0.000|
+SEVSEG_DATA<6>|   10.482(R)|do_it_BUFGP       |   0.000|
+SEVSEG_DATA<7>|    9.989(R)|do_it_BUFGP       |   0.000|
+--------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.544|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock do_it
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+do_it          |    5.856|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+----------------------+---------------+---------+
+Source Pad            |Destination Pad|  Delay  |
+----------------------+---------------+---------+
+binaryPasswordLeft<0> |SEVSEG_DATA<0> |    8.986|
+binaryPasswordLeft<0> |SEVSEG_DATA<1> |    8.839|
+binaryPasswordLeft<0> |SEVSEG_DATA<2> |   10.234|
+binaryPasswordLeft<0> |SEVSEG_DATA<3> |    8.807|
+binaryPasswordLeft<0> |SEVSEG_DATA<4> |    9.074|
+binaryPasswordLeft<0> |SEVSEG_DATA<5> |    8.780|
+binaryPasswordLeft<0> |SEVSEG_DATA<6> |    9.190|
+binaryPasswordLeft<0> |SEVSEG_DATA<7> |    8.941|
+binaryPasswordLeft<1> |SEVSEG_DATA<0> |    9.815|
+binaryPasswordLeft<1> |SEVSEG_DATA<1> |    9.264|
+binaryPasswordLeft<1> |SEVSEG_DATA<2> |    9.864|
+binaryPasswordLeft<1> |SEVSEG_DATA<3> |    9.776|
+binaryPasswordLeft<1> |SEVSEG_DATA<4> |   10.047|
+binaryPasswordLeft<1> |SEVSEG_DATA<5> |    9.124|
+binaryPasswordLeft<1> |SEVSEG_DATA<6> |    9.618|
+binaryPasswordLeft<1> |SEVSEG_DATA<7> |    9.125|
+binaryPasswordLeft<2> |SEVSEG_DATA<0> |    9.159|
+binaryPasswordLeft<2> |SEVSEG_DATA<1> |    9.209|
+binaryPasswordLeft<2> |SEVSEG_DATA<2> |   10.570|
+binaryPasswordLeft<2> |SEVSEG_DATA<3> |    9.686|
+binaryPasswordLeft<2> |SEVSEG_DATA<4> |    9.954|
+binaryPasswordLeft<2> |SEVSEG_DATA<5> |    9.174|
+binaryPasswordLeft<2> |SEVSEG_DATA<6> |    9.449|
+binaryPasswordLeft<2> |SEVSEG_DATA<7> |    9.244|
+binaryPasswordLeft<3> |SEVSEG_DATA<0> |    8.886|
+binaryPasswordLeft<3> |SEVSEG_DATA<1> |    9.144|
+binaryPasswordLeft<3> |SEVSEG_DATA<2> |    9.789|
+binaryPasswordLeft<3> |SEVSEG_DATA<3> |    8.285|
+binaryPasswordLeft<3> |SEVSEG_DATA<4> |    8.552|
+binaryPasswordLeft<3> |SEVSEG_DATA<5> |    8.679|
+binaryPasswordLeft<3> |SEVSEG_DATA<6> |    9.052|
+binaryPasswordLeft<3> |SEVSEG_DATA<7> |    8.845|
+binaryPasswordLeft<4> |SEVSEG_DATA<0> |    8.227|
+binaryPasswordLeft<4> |SEVSEG_DATA<1> |    8.782|
+binaryPasswordLeft<4> |SEVSEG_DATA<2> |    9.442|
+binaryPasswordLeft<4> |SEVSEG_DATA<3> |    8.554|
+binaryPasswordLeft<4> |SEVSEG_DATA<4> |    8.495|
+binaryPasswordLeft<4> |SEVSEG_DATA<5> |    8.429|
+binaryPasswordLeft<4> |SEVSEG_DATA<6> |    8.856|
+binaryPasswordLeft<4> |SEVSEG_DATA<7> |    8.270|
+binaryPasswordRight<0>|SEVSEG_DATA<0> |    9.883|
+binaryPasswordRight<0>|SEVSEG_DATA<1> |    9.736|
+binaryPasswordRight<0>|SEVSEG_DATA<2> |   11.131|
+binaryPasswordRight<0>|SEVSEG_DATA<3> |    9.704|
+binaryPasswordRight<0>|SEVSEG_DATA<4> |    9.971|
+binaryPasswordRight<0>|SEVSEG_DATA<5> |    9.677|
+binaryPasswordRight<0>|SEVSEG_DATA<6> |   10.087|
+binaryPasswordRight<0>|SEVSEG_DATA<7> |    9.838|
+binaryPasswordRight<1>|SEVSEG_DATA<0> |    9.837|
+binaryPasswordRight<1>|SEVSEG_DATA<1> |    9.286|
+binaryPasswordRight<1>|SEVSEG_DATA<2> |    9.886|
+binaryPasswordRight<1>|SEVSEG_DATA<3> |    9.798|
+binaryPasswordRight<1>|SEVSEG_DATA<4> |   10.069|
+binaryPasswordRight<1>|SEVSEG_DATA<5> |    9.146|
+binaryPasswordRight<1>|SEVSEG_DATA<6> |    9.640|
+binaryPasswordRight<1>|SEVSEG_DATA<7> |    9.147|
+binaryPasswordRight<2>|SEVSEG_DATA<0> |    9.547|
+binaryPasswordRight<2>|SEVSEG_DATA<1> |    9.597|
+binaryPasswordRight<2>|SEVSEG_DATA<2> |   10.958|
+binaryPasswordRight<2>|SEVSEG_DATA<3> |   10.074|
+binaryPasswordRight<2>|SEVSEG_DATA<4> |   10.342|
+binaryPasswordRight<2>|SEVSEG_DATA<5> |    9.562|
+binaryPasswordRight<2>|SEVSEG_DATA<6> |    9.837|
+binaryPasswordRight<2>|SEVSEG_DATA<7> |    9.632|
+binaryPasswordRight<3>|SEVSEG_DATA<0> |    9.562|
+binaryPasswordRight<3>|SEVSEG_DATA<1> |    9.820|
+binaryPasswordRight<3>|SEVSEG_DATA<2> |   10.465|
+binaryPasswordRight<3>|SEVSEG_DATA<3> |    8.961|
+binaryPasswordRight<3>|SEVSEG_DATA<4> |    9.228|
+binaryPasswordRight<3>|SEVSEG_DATA<5> |    9.355|
+binaryPasswordRight<3>|SEVSEG_DATA<6> |    9.728|
+binaryPasswordRight<3>|SEVSEG_DATA<7> |    9.521|
+binaryPasswordRight<4>|SEVSEG_DATA<0> |    8.939|
+binaryPasswordRight<4>|SEVSEG_DATA<1> |    9.494|
+binaryPasswordRight<4>|SEVSEG_DATA<2> |   10.154|
+binaryPasswordRight<4>|SEVSEG_DATA<3> |    9.266|
+binaryPasswordRight<4>|SEVSEG_DATA<4> |    9.207|
+binaryPasswordRight<4>|SEVSEG_DATA<5> |    9.141|
+binaryPasswordRight<4>|SEVSEG_DATA<6> |    9.568|
+binaryPasswordRight<4>|SEVSEG_DATA<7> |    8.982|
+----------------------+---------------+---------+
+
+
+Analysis completed Tue Nov 26 19:51:15 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 174 MB
+
+
+

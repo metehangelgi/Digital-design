@@ -1,0 +1,31 @@
+NET "SEVSEG_CONTROL[7]" LOC = P61;
+NET "SEVSEG_CONTROL[6]" LOC = P60;
+NET "SEVSEG_CONTROL[5]" LOC = P57;
+NET "SEVSEG_CONTROL[4]" LOC = P59;
+NET "SEVSEG_CONTROL[3]" LOC = P56;
+NET "SEVSEG_CONTROL[2]" LOC = P52;
+NET "SEVSEG_CONTROL[1]" LOC = P49;
+NET "SEVSEG_CONTROL[0]" LOC = P50;
+
+NET "SEVSEG_DATA[7]" LOC = P71;
+NET "SEVSEG_DATA[6]" LOC = P62;
+NET "SEVSEG_DATA[5]" LOC = P65;
+NET "SEVSEG_DATA[4]" LOC = P72;
+NET "SEVSEG_DATA[3]" LOC = P73;
+NET "SEVSEG_DATA[2]" LOC = P98;
+NET "SEVSEG_DATA[1]" LOC = P64;
+NET "SEVSEG_DATA[0]" LOC = P70;		
+			
+NET "clk" LOC = P40;
+NET "do_it" LOC = P36;
+NET "changePassword" LOC = P32;
+NET "binaryPasswordLeft[0]" LOC = P90;
+NET "binaryPasswordLeft[1]" LOC = P88;
+NET "binaryPasswordLeft[2]" LOC = P85;
+NET "binaryPasswordLeft[3]" LOC = P82;
+NET "binaryPasswordLeft[4]" LOC = P78;
+NET "binaryPasswordRight[0]" LOC = P15;
+NET "binaryPasswordRight[1]" LOC = P12;
+NET "binaryPasswordRight[2]" LOC = P5;
+NET "binaryPasswordRight[3]" LOC = P4;
+NET "binaryPasswordRight[4]" LOC = P94;
